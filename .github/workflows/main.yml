@@ -1,0 +1,16 @@
+name: Test
+
+on: push
+
+jobs:
+  ping-site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Ping homepage
+        run: |
+          echo "→ Checking Website"
+          curl -I https://c0d3gli7ch.github.io
